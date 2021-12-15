@@ -1,6 +1,6 @@
 const pool = require("../db.js");
 
-//Tüm Verileri Getirme
+//Fetch All Data
 const getAllTodos = async (req, res) => {
   try {
     const allTodos = await pool.query(
@@ -12,7 +12,7 @@ const getAllTodos = async (req, res) => {
   }
 };
 
-//Bir Tane Veri Getirme
+//Fetch One Data
 const getTodo = async (req, res) => {
   console.log(req.body);
   const { id } = req.params;
@@ -24,7 +24,7 @@ const getTodo = async (req, res) => {
   }
 };
 
-//Veri Oluşturma
+//Create Data
 const createTodo = async (req, res) => {
   try {
     console.log(req.body);
@@ -39,7 +39,7 @@ const createTodo = async (req, res) => {
   }
 };
 
-//Veri Güncelleme
+//Update Data
 const updateTodo = async (req, res) => {
   console.log(req.body);
   try {
@@ -55,7 +55,7 @@ const updateTodo = async (req, res) => {
   }
 };
 
-//Veri Silme
+//Delete Data
 const deleteTodo = async (req, res) => {
   console.log(req.body);
   const { id } = req.params;

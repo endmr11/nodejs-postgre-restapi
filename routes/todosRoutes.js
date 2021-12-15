@@ -2,19 +2,19 @@ const express = require("express");
 const router = express.Router();
 const todosController = require("../controllers/todosControllers.js");
 
-//Tüm Verileri Getirme
+//Fetch All Data
 router.get("/todos", todosController.getAllTodos);
 
-//Bir Tane Veri Getirme
+//Fetch One Data
 router.get("/todos/:id", todosController.getTodo);
 
-//Veri Oluşturma
+//Create Data
 router.post("/todos", todosController.createTodo);
 
-//Veri Güncelleme
+//Update Data
 router.put("/todos/:id", todosController.updateTodo);
 
-//Veri Silme
+//Delete Data
 router.delete("/todos/:id", todosController.deleteTodo);
 
 
